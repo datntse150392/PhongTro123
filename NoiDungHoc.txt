@@ -1,0 +1,10 @@
+#Day3
++ Sử dụng thư viện pupperteer https://pptr.dev/ để cào data về 
+
+#Day4
++ Cách dựng 1 base cho sv nodejs
++ Thư viện nodemon: giúp cho dev khi chỉnh sửa code ở sv thì không cần phải khởi động lại sv
++ Thư viện babel-node: giúp biên dịch cho các đoạn code để không bị lỗi ở các phiên bản
++ Thư viện cors: nhằm để config để có thể tránh tình trạng bị lỗi cors như là chặn instance
++ Thư viện dotenv: giúp cho sv đọc được các biến trong file .env
++ Express: một framework giúp cho nodejs có thể tạo ra các chuẩn api

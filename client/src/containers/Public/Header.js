@@ -14,12 +14,17 @@ export default function Header() {
   const goLogin = useCallback(() => {
     navigate(path.LOGIN);
   });
+
+  const goHomePage = useCallback(() => {
+    navigate(path.HOME);
+  });
   return (
     <div className="w-1100 flex items-center justify-between">
       <img
         src={logo}
         alt="logo"
-        className="w-[240px] h-[70px] object-contain"
+        className="w-[240px] h-[70px] object-contain cursor-pointer"
+        onClick={goHomePage}
       />
       <div className="flex flex-row items-center gap-2">
         <Button
