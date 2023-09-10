@@ -15,6 +15,9 @@ export default function Header() {
     navigate(path.LOGIN);
   });
 
+  const goRegister = useCallback(() => {
+    navigate(path.REGISTER);
+  });
   const goHomePage = useCallback(() => {
     navigate(path.HOME);
   });
@@ -37,6 +40,7 @@ export default function Header() {
           text={"Đăng ký"}
           textColor={"text-white"}
           bgColor={"bg-blue-700"}
+          onClick={goRegister}
         />
         <Button
           text={"Đăng tin mới "}

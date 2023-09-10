@@ -8,3 +8,8 @@
 + Thư viện cors: nhằm để config để có thể tránh tình trạng bị lỗi cors như là chặn instance
 + Thư viện dotenv: giúp cho sv đọc được các biến trong file .env
 + Express: một framework giúp cho nodejs có thể tạo ra các chuẩn api
+
+
+#Day5
++ Viết API login, register
++ Xử lí FE (dùng 2 API login và register)
