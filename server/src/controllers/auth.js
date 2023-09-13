@@ -1,7 +1,6 @@
 import { LoginService, registerService } from "../services/auth";
 
 // Mã lỗi sẽ chia ra như sau: số dương là client, số âm là server
-
 export const register = async (req, res) => {
   const { name, phone, password } = req.body;
   try {

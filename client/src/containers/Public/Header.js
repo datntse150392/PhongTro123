@@ -1,11 +1,19 @@
 import React, { useCallback } from "react";
 import logo from "../../assets/logo-phongtro.svg";
 import { Button } from "../../components";
-import { AiOutlinePlusCircle } from "react-icons/ai";
+// Icon
+import {
+  AiOutlinePlusCircle,
+  AiOutlineUsergroupAdd,
+  AiOutlineUser,
+  AiOutlineUserDelete,
+} from "react-icons/ai";
 // Hook
 import { useNavigate } from "react-router-dom";
 // path
 import { path } from "../../ultils/constant";
+import { useDispatch } from "react-redux";
+import * as actions from "../../store/actions";
 export default function Header() {
   const navigate = useNavigate();
   /*
@@ -21,6 +29,11 @@ export default function Header() {
   const goHomePage = useCallback(() => {
     navigate(path.HOME);
   });
+
+  const dispatch = useDispatch();
+  const hanleSubmit = () => {
+    localStorage.removeItem("persist:auth");
+  };
   return (
     <div className="w-1100 flex items-center justify-between">
       <img
@@ -35,18 +48,27 @@ export default function Header() {
           textColor={"text-white"}
           bgColor={"bg-blue-700"}
           onClick={goLogin}
+          IcBefore={AiOutlineUser}
         />
         <Button
           text={"Đăng ký"}
           textColor={"text-white"}
           bgColor={"bg-blue-700"}
           onClick={goRegister}
+          IcBefore={AiOutlineUsergroupAdd}
         />
         <Button
           text={"Đăng tin mới "}
           textColor={"text-white"}
           bgColor={"bg-[#f73859]"}
           IcAfter={AiOutlinePlusCircle}
+        />
+        <Button
+          text={"Đăng xuất"}
+          textColor={"text-red"}
+          bgColor={"bg-[#fff]"}
+          IcAfter={AiOutlineUserDelete}
+          onClick={hanleSubmit}
         />
       </div>
     </div>
